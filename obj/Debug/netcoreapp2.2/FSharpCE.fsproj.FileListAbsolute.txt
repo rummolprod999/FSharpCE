@@ -1,0 +1,10 @@
+/home/alex/Загрузки/FSharpCE/bin/Debug/netcoreapp2.2/FSharpCE.deps.json
+/home/alex/Загрузки/FSharpCE/bin/Debug/netcoreapp2.2/FSharpCE.runtimeconfig.json
+/home/alex/Загрузки/FSharpCE/bin/Debug/netcoreapp2.2/FSharpCE.runtimeconfig.dev.json
+/home/alex/Загрузки/FSharpCE/bin/Debug/netcoreapp2.2/FSharpCE.dll
+/home/alex/Загрузки/FSharpCE/bin/Debug/netcoreapp2.2/FSharpCE.pdb
+/home/alex/Загрузки/FSharpCE/obj/Debug/netcoreapp2.2/FSharpCE.fsprojAssemblyReference.cache
+/home/alex/Загрузки/FSharpCE/obj/Debug/netcoreapp2.2/FSharpCE.AssemblyInfoInputs.cache
+/home/alex/Загрузки/FSharpCE/obj/Debug/netcoreapp2.2/FSharpCE.AssemblyInfo.fs
+/home/alex/Загрузки/FSharpCE/obj/Debug/netcoreapp2.2/FSharpCE.dll
+/home/alex/Загрузки/FSharpCE/obj/Debug/netcoreapp2.2/FSharpCE.pdb
