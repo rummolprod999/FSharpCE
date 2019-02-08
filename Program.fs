@@ -1,6 +1,16 @@
 ﻿namespace ParserFsharp
 open System
 
+type LoggingBuilder() =
+    let log p = printfn "expression is %A" p
+
+    member this.Bind(x, f) = 
+        log x
+        f x
+
+    member this.Return(x) = 
+        x
+        
 type ListBuilder() =
     member this.Bind(m, f) =
         printfn "Bind fun execute %A" m
