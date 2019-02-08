@@ -121,6 +121,16 @@ type TraceBuilder() =
         printfn "%A - Run End. Result is %A" funcToRun runResult
         runResult
 
+type OptionBuilder() =
+
+    member this.Bind(x, f) =
+        printfn "this.Bind: %A" x
+        match x with
+        | None -> None
+        | Some v -> f v
+
+    member this.Return(x) = Some x 
+
 module EntryPoint =
             
         [<EntryPoint>]
@@ -137,4 +147,11 @@ module EntryPoint =
                             printfn "AAAAAAAAAAAAAAA"
                             return 2
                             } 
+            let optM = OptionBuilder()
+            let n = optM { let x = 56
+                           let! y = Some 78
+                           let! z = None
+                           let! v = Some 42
+                           return x+y+v }
+            printfn "%A" n
             0 
