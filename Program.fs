@@ -10,7 +10,7 @@ type LoggingBuilder() =
 
     member this.Return(x) = 
         x
-        
+
 type ListBuilder() =
     member this.Bind(m, f) =
         printfn "Bind fun execute %A" m
@@ -92,7 +92,7 @@ type TraceBuilder() =
         let y = f()
         printfn "Combine. Finished second param %A. Result is %A" f y
 
-        match m,y with
+        match (m, y) with
         | Some a, Some b ->
             printfn "combining %A and %A" a b 
             Some (a + b)
