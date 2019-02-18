@@ -154,4 +154,17 @@ module EntryPoint =
                            let! v = Some 42
                            return x+y+v }
             printfn "%A" n
+            let myBools = [true; false; true]
+            let resB = myBools |> List.filter id |> List.length |> (%) 2 <> 0
+            printfn "%A" resB
+            let A = array2D [[1;2;3];[4;5;6];[7;8;9]]
+            printfn "Full matrix:\n %A" A
+            let row0 = A.[0,*]
+            printfn "Row 0: %A" row0
+            let col0 = A.[*,0]
+            printfn "Column 0: %A" col0
+            let subA = A.[*,0..1]
+            printfn "%A" subA
+            let subA' = A.[0..1,*]
+            printfn "%A" subA'
             0 
