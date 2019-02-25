@@ -146,6 +146,8 @@ module EntryPoint =
                             printfn "Part 2: after return has happened"
                             printfn "AAAAAAAAAAAAAAA"
                             return 2
+                            let! x = trace { return 6 }
+                            return x
                             } 
             let optM = OptionBuilder()
             let n = optM { let x = 56
