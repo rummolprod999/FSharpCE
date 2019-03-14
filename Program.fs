@@ -168,6 +168,7 @@ module EntryPoint =
                               }
             printfn "%A" nn
             trace { 
+                    printfn "test1"
                     if false then return 333 else printfn "sssss"
                     printfn "test"
                     } |> printfn "Result for if without else: %A" 
