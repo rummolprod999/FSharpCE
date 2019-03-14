@@ -171,5 +171,14 @@ module EntryPoint =
                     printfn "test1"
                     if false then return 333 else printfn "sssss"
                     printfn "test"
+                    let r = if true then
+                                //let! x = Some 1
+                                printfn "inside if branch"
+                                Some 1
+                            else None
+                    printfn "ok 4444"
+                    printfn "A is %A" r
+                    return 555
+                    //None
                     } |> printfn "Result for if without else: %A" 
             0 
