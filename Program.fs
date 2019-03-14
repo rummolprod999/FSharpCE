@@ -160,5 +160,10 @@ module EntryPoint =
             let resB = myBools |> List.filter id |> List.length |> (%) 2 <> 0
             let resC = myBools |> Seq.fold (<>) false
             printfn "%A" resC
-
+            let nn = trace { printfn "ok1"
+                             if true then printfn "ok2" else return 999
+                             return 555
+                             printfn "ok3"
+                              }
+            printfn "%A" nn
             0 
