@@ -1,5 +1,6 @@
 ﻿namespace ParserFsharp
 open System
+open System.IO
 
 type LoggingBuilder() =
     let log p = printfn "expression is %A" p
@@ -161,9 +162,13 @@ module EntryPoint =
             let resC = myBools |> Seq.fold (<>) false
             printfn "%A" resC
             let nn = trace { printfn "ok1"
-                             if true then printfn "ok2" else return 999
+                             if false then printfn "ok2" else return 999
                              return 555
                              printfn "ok3"
                               }
             printfn "%A" nn
+            trace { 
+                    if false then return 333 else printfn "sssss"
+                    printfn "test"
+                    } |> printfn "Result for if without else: %A" 
             0 
